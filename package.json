@@ -1,0 +1,29 @@
+{
+  "name": "studio-angular",
+  "version": "1.0.0",
+  "description": "Angular Desech Studio Plugin",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:desech/studio-angular.git"
+  },
+  "homepage": "https://www.desech.com",
+  "author": {
+    "name": "Desech Studio SRL",
+    "email": "contact@desech.com"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "node build.js"
+  },
+  "desech": {
+    "title": "Angular",
+    "author": "Desech",
+    "category": "exportCode",
+    "url": "https://github.com/desech/studio-angular",
+    "autoupdate": true
+  }
+}
