@@ -54,6 +54,11 @@ ng new my-app
   Style: CSS
 cd my-app
 ng serve --open
+```
+
+- Cleanup
+
+```sh
 rm -rf node_modules public package-lock.json
 cd src
 rm -rf assets index.html favicon.ico app/app.component.css app/app.module.ts app/app-routing.module.ts
