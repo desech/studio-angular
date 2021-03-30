@@ -28,25 +28,12 @@ ng serve --open
 - Inside Desech Studio there are 2 places where you can add angular attributes/properties:
   - when you click on a component
   - when you click on an html element in the HTML section > Element properties
-- Here you can set any angular specific attributes like `tabIndex`, `onClick`, `dangerouslySetInnerHTML`, etc.
-  - You can't set `className` because it's already set by `Desech Studio`
-- To use `if conditions` or `for loops` you need to use `angularIf` or `angularFor`, similar to how angular and vue works:
-  - `angularIf` with `users.length > 0` will export this angular code:
-    - `{users.length > 0 && <div>...</div>}`
-  - `angularFor` with `users :: user` will export this angular code:
-    - `{users.map(user => <li>...</li>)}`
-    - Please remember to add a `key` property too, for example `key` = `{user.id}`
-  - `angularIfFor` with `users.length > 0 :: users :: user` will export this angular code:
-    - `{users.length > 0 && users.map(user => <li>...</li>)}`
-  - `angularForIf` with `users :: user :: user.id > 0` will export this angular code:
-    - `{users.map(user => user.id > 0 && <li>...</li>}`
-  - You can only have one of these properties at one time. You can't have both `angularIf` and `angularFor` for example. Instead use `angularIfFor` or `angularForIf`
-  - As you have noticed the split string between these values is a ` :: ` - double colon with spaces in between.
+- Here you can set any angular specific attributes like `[ngClass]`, `(click)`, `*ngIf`, etc.
 
 ### Tips
 
 - Make sure to name your components as verbose as possible. For example instead of `header` use `page-header` because `header` is an actual html tag, and you might create infinite loops.
-- Anywhere inside text you can write code like `{{user.userId}}` and it will be exported as angular js code
+- Anywhere inside text you can write code like `{{user.userId}}` and it will be exported as angular js code.
 
 - That's it. Ignore the rest if you don't plan on doing development on this plugin.
 
