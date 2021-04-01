@@ -3,7 +3,7 @@
 ## Install
 
 - In Desech Studio
-  - Go to Settings > Plugins, search for "Angular" and install it
+  - Go to Settings > Plugins > Angular and install it
   - Go to File > Project Settings > Export Code Plugin > set to "Angular"
 - Using a design system works with this plugin, because we copy over all the css/js files.
 
