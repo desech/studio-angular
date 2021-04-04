@@ -29,6 +29,7 @@ ng serve --open
   - when you click on a component
   - when you click on an html element in the HTML section > Element properties
 - Here you can set any angular specific attributes like `[ngClass]`, `(click)`, `*ngIf`, etc.
+- If you set a `class` property it will be added to the existing classes set by `Desech Studio`
 
 ### Tips
 
