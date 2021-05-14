@@ -1,4 +1,6 @@
-# Angular plugin for Desech Studio
+# Angular plugin for [Desech Studio](https://www.desech.com/)
+
+[www.desech.com](https://www.desech.com/)
 
 ## Install
 
@@ -83,3 +85,8 @@ All Desech Studio plugins have access to the following npm libraries, because th
 ## Other Documentation
 
 - Go to [angular.io](https://angular.io/guide/setup-local) to read the documentation.
+
+
+## Desech Studio website
+
+ - [www.desech.com](https://www.desech.com/)
