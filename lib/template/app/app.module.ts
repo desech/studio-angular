@@ -1,23 +1,17 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
+import { AppComponent } from './app.component'
+// desech - start import block
+// desech - end import block
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-// desech studio - start import block
-// desech studio - end import block
-
+// @NgModule decorator with its metadata
 @NgModule({
   declarations: [
     AppComponent,
-
-    // desech studio - start module block
-    // desech studio - end module block
+    // desech - start module block
+    // desech - end module block
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
 })

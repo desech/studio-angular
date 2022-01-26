@@ -1,12 +1,11 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-// desech studio - start import block
-// desech studio - end import block
+import { NgModule } from '@angular/core'
+import { RouterModule, Routes } from '@angular/router'
+// desech - start import block
+// desech - end import block
 
 const routes: Routes = [
-  // desech studio - start route block
-  // desech studio - end route block
+  // desech - start route block
+  // desech - end route block
 ];
 
 @NgModule({
