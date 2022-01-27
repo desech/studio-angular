@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { CLASSNAMEComponent } from './FILENAME.component'
+import { CLASSNAMEComponent } from './MODULE.component'
 
 describe('CLASSNAMEComponent', () => {
   let component: CLASSNAMEComponent

@@ -46,6 +46,7 @@ npm run storybook
 - If you set a `class` property it will be added to the existing classes set by `Desech Studio`
 - Make sure to name your components as verbose as possible. For example instead of `header` use `page-header` because `header` is an actual html tag, and you might create infinite loops.
 - Anywhere inside text you can write code like `{{user.userId}}` and it will be exported as angular js code.
+- no `routerLink`
 
 ## Plugin Development
 
@@ -76,6 +77,7 @@ npx sb init
 rm -rf node_modules package-lock.json
 cd src
 rm -rf assets index.html favicon.ico app/app.component.css app/app.module.ts app/app-routing.module.ts stories
+- open `tsconfig.json` and add `"allowJs": true,` in the `compilerOptions` object
 - open `angular.json` and replace `"src/assets"` with `"src/asset", "src/font"`
 - open `src/app/app.component.html` and delete everything except `<router-outlet></router-outlet>`
 - open `src/app/app.component.ts` and delete the `styleUrls: ['./app.component.css']` line

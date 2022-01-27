@@ -1,17 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 // desech - start import block
 // desech - end import block
 
-// @NgModule decorator with its metadata
 @NgModule({
   declarations: [
-    AppComponent,
     // desech - start module block
     // desech - end module block
+    AppComponent
   ],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
