@@ -8,9 +8,7 @@ import { Component, OnInit, Input } from '@angular/core'
 })
 
 export class CLASSNAMEComponent implements OnInit {
-  // desech - start props block
-  // desech - end props block
-
+  d: any
   ngOnInit(): void {
     // desech - start data block
     // desech - end data block
