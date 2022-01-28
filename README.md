@@ -28,8 +28,6 @@ ng serve --open
 - Check the [docs](https://storybook.js.org/docs/angular/writing-stories/introduction) for further reading
 
 ```sh
-export NODE_OPTIONS=--openssl-legacy-provider # linux / mac os only
-set NODE_OPTIONS=--openssl-legacy-provider # windows only
 npm run storybook
 ```
 
@@ -47,6 +45,9 @@ npm run storybook
 - Make sure to name your components as verbose as possible. For example instead of `header` use `page-header` because `header` is an actual html tag, and you might create infinite loops.
 - Anywhere inside text you can write code like `{{user.userId}}` and it will be exported as angular js code.
 - no `routerLink`
+- Because all pages and components are imported in `app.module.ts`, you need to make sure pages and components are not named the same.
+- don't name components like html elements, for example `<header>`
+- use {{ '{' }} to escape brackets
 
 ## Plugin Development
 
@@ -73,7 +74,6 @@ ng new my-app
   Style: CSS
 cd my-app
 npx sb init
-- open `.storybook/main.js` and add `"staticDirs": [ "../public" ],`
 rm -rf node_modules package-lock.json
 cd src
 rm -rf assets index.html favicon.ico app/app.component.css app/app.module.ts app/app-routing.module.ts stories

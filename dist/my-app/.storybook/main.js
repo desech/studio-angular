@@ -7,9 +7,6 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials"
   ],
-  "staticDirs": [
-    "../public"
-  ],
   "framework": "@storybook/angular",
   "core": {
     "builder": "webpack5"
