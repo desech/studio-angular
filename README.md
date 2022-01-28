@@ -37,17 +37,22 @@ npm run storybook
 
 ### Tips
 
-- Inside Desech Studio there are 2 places where you can add angular attributes/properties:
-  - when you click on a component
-  - when you click on an html element in the HTML section > Element properties
-- Here you can set any angular specific attributes like `[ngClass]`, `(click)`, `*ngIf`, etc.
-- If you set a `class` property it will be added to the existing classes set by `Desech Studio`
-- Make sure to name your components as verbose as possible. For example instead of `header` use `page-header` because `header` is an actual html tag, and you might create infinite loops.
+- Anchor links need to follow this format `/contact.html` with a backslash at the beginning and an `.html` extension at the end
+  - `<a>` elements are not converted to `<routerLink>` because of how overrides work. You will have to add your own page history code to the application.
 - Anywhere inside text you can write code like `{{user.userId}}` and it will be exported as angular js code.
-- no `routerLink`
+  - Element attributes can contain code, but only if the attribute belongs to that html element, for example a `href` on an `<a>` element.
+  - You can use element or component programming properties like `[attr.foo]` = `bar` to add any attribute.
+  - If you add it as a component override, then it will no longer be parsed as code.
+- Inside Desech Studio you can add angular directives in the Programming properties for both elements and components, like `*ngIf`, `[attr.foo]`, `[(ngModel)]`, etc.
+  - Although we do allow any property name, if you use something like `foo$:@{_` and it obviously throws an error in angular, that's on you to handle.
+  - `*ngIf`, `*ngFor` can't be overridden.
+  - Other directives can be overridden, but the actual value will be a string, not code.
+  - `[ngClass]` properties are ignored
+- `unrender` uses `*ngIf`, so you can't have `*ngIf` or `*ngFor` with unrendered elements
 - Because all pages and components are imported in `app.module.ts`, you need to make sure pages and components are not named the same.
-- don't name components like html elements, for example `<header>`
-- use {{ '{' }} to escape brackets
+  - Don't name components like html elements, for example `<header>`
+- If you want to use curly brackets `{` and `}` as text, not as angular code, then use `{{'{'}}` and `{{'}'}}` like so: `Some object {{'{'}}id: 1{{'}'}}`. This will make angular to render it as `Some object {id: 1}`
+  - If the information is coming from the database, then you will have to parse your text and replace all curly brackets with the corresponding variable
 
 ## Plugin Development
 
