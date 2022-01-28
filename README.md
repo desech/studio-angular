@@ -77,7 +77,7 @@ npx sb init
 rm -rf node_modules package-lock.json
 cd src
 rm -rf assets index.html favicon.ico app/app.component.css app/app.module.ts app/app-routing.module.ts stories
-- open `tsconfig.json` and add `"allowJs": true,` in the `compilerOptions` object
+- open `tsconfig.json` and add `"allowJs": true,` and set `"strict": false,` in the `compilerOptions` object
 - open `angular.json` and replace `"src/assets"` with `"src/asset", "src/font"`
 - open `src/app/app.component.html` and delete everything except `<router-outlet></router-outlet>`
 - open `src/app/app.component.ts` and delete the `styleUrls: ['./app.component.css']` line
