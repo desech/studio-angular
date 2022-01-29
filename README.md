@@ -53,6 +53,7 @@ npm run storybook
   - Don't name components like html elements, for example `<header>`
 - If you want to use curly brackets `{` and `}` as text, not as angular code, then use `{{'{'}}` and `{{'}'}}` like so: `Some object {{'{'}}id: 1{{'}'}}`. This will make angular to render it as `Some object {id: 1}`
   - If the information is coming from the database, then you will have to parse your text and replace all curly brackets with the corresponding variable
+- If you override the inner html of an element, and you have there some inline elements with some custom properties, if there are any errors, like attributes not belonging to elements, etc, angular will not warn you, and instead it will silently fail by removing the attribute on the inline element.
 
 ## Plugin Development
 
